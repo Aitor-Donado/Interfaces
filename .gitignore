@@ -1,0 +1,9 @@
+# Ignorar carpetas y su contenido
+/interfaces/
+/.vscode/
+
+# Ignorar archivos específicos
+# En el directorio raíz
+/untitled.py
+# En cualquier carpeta
+untitled.ui
