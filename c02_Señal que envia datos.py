@@ -11,13 +11,13 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Mi aplicación")
         
         # Código del botón
-        button = QPushButton('Haz clic aquí')
+        boton = QPushButton('Haz clic aquí')
         # Convertimos el botón en un interruptor que podemos dejar pulsado
-        button.setCheckable(True)
+        boton.setCheckable(True)
         # Señal de click y llamada al método
-        button.clicked.connect(self.boton_pulsado)
-        button.clicked.connect(self.interruptor_activado)
-        self.setCentralWidget(button)
+        boton.clicked.connect(self.boton_pulsado)
+        boton.clicked.connect(self.interruptor_activado)
+        self.setCentralWidget(boton)
 
     # Método que se lanza con el click
     def boton_pulsado(self):
@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 
-window = MainWindow()
-window.show()
+ventana = MainWindow()
+ventana.show()
 
 app.exec()

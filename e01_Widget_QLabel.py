@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 
-window = MainWindow()
-window.show()
+ventana = MainWindow()
+ventana.show()
 
 app.exec()

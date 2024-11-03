@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QCheckBox, QLineE
 
 
 # Subclase QMainWindow para personalizar la ventana principal
-class MainWindow(QMainWindow):
+class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Mi Aplicación")
@@ -18,15 +18,14 @@ class MainWindow(QMainWindow):
         widget.stateChanged.connect(self.show_state)
         self.setCentralWidget(widget)
 
-    def show_state(self, s):
-        print(Qt.CheckState(s) == Qt.CheckState.Checked)
-        print(s)
-
+    def show_state(self, estado):
+        print(Qt.CheckState(estado) == Qt.CheckState.Checked)
+        print(f"El estado es {estado}")
 
 
 app = QApplication(sys.argv)
 
-window = MainWindow()
-window.show()
+ventana = VentanaPrincipal()
+ventana.show()
 
 app.exec()
