@@ -12,7 +12,8 @@ class VentanaPrincipal(QMainWindow):
         widget = QCheckBox("Esto es un checkbox")
         # widget.setCheckState(Qt.CheckState.Checked)
         # Existe un tercer estado intermedio
-        # Así: widget.setCheckState(Qt.PartiallyChecked)
+        # Así: 
+        # widget.setCheckState(Qt.PartiallyChecked)
         # O así: 
         widget.setTristate(True)
         widget.stateChanged.connect(self.show_state)

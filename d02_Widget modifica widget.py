@@ -1,6 +1,5 @@
 import sys
 
-from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget
 
 
@@ -18,7 +17,7 @@ class MainWindow(QMainWindow):
 
         # El objeto input genera señal al cambiar su texto
         # Lo recibe el label y replica el texto introducido
-        self.input.textChanged.connect(self.label.setText)
+        self.input.textChanged.connect(self.update_label)
         
         layout = QVBoxLayout()
         layout.addWidget(self.input)
@@ -28,6 +27,9 @@ class MainWindow(QMainWindow):
         container.setLayout(layout)
 
         self.setCentralWidget(container)
+
+    def update_label(self, text):
+        self.label.setText(text.upper())
 
 
 app = QApplication(sys.argv)

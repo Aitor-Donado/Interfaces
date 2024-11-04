@@ -17,6 +17,9 @@ class VentanaPrincipal(QWidget):
         boton = QPushButton('Haz clic aquí')
         layout.addWidget(boton)
 
+        boton2 = QPushButton('O clic aquí')
+        layout.addWidget(boton2)
+
         # Establecer el layout de la ventana
         self.setLayout(layout)
 
