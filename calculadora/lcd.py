@@ -9,4 +9,3 @@ def lcd(centralwidget):
     lcdNumber.setDigitCount(9)
     lcdNumber.setObjectName("lcdNumber")
     return lcdNumber
-
