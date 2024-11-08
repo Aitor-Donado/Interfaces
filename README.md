@@ -37,8 +37,17 @@ pip install pyqt6-tools
 pyqt6-tools designer
 ```
 
-Instalar dependencias desde requirements.txt
+### Conversión ui --> py
+La interfaz creada con el 'designer' se guarda con extensión .ui y formato de etiquetas <xml>
 
+Para convertir un diseño .ui en un archivo de clases PyQt6 usamos este comando de la terminal:
+(Sustituir calculadora.ui por el nombre del archivo con el path correcto e igualmente calculadora.py con el archivo de Python que se desee crear.)
+
+```bash
+pyuic6 -x calculadora.ui -o calculadora.py
+```
+
+### Instalar dependencias desde requirements.txt
 Para instalar las dependencias listadas en el archivo requirements.txt en tu entorno virtual, puedes usar el siguiente comando:
 
 ```bash
